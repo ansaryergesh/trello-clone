@@ -5,9 +5,9 @@ import { NewItemFormContainer, NewItemButton, NewItemInput } from "./styles";
 interface NewItemFormProps {
   onAdd(text: string): void;
 }
-export const NewItemForm = (props: NewItemFormProps) => {
+
+export const NewItemForm = ({ onAdd }: NewItemFormProps) => {
   const [text, setText] = useState("");
-  const { onAdd } = props;
   const inputRef = useFocus();
 
   return (
